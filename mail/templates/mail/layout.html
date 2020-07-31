@@ -4,6 +4,8 @@
 <html lang="en">
     <head>
         <title>{% block title %}dsgmail{% endblock %}</title>
+
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -13,10 +15,15 @@
         {% endblock %}
     </head>
     <body>
+
         <div class="container">
             {% block body %}
             {% endblock %}
         </div>
       <p id="dsg" ><i><strong>created by sai ganesh</strong></i></p>
+      <br>
+       {% load static %}
+      <img id="im" src="{% static "mail/dsgg.png" %}" alt="My image" style="float:center;height=30px width=30px" >
+
     </body>
 </html>
