@@ -11,10 +11,10 @@
     <form action="{% url 'register' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="Email Address, you r welcome to add @dsgmail.com">
+            <input class="form-control" type="email" name="email" placeholder="Email Address, you are welcome to add @dsgmail.com">
         </div>
         <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="password,dont set love names(just kidding)">
+            <input class="form-control" type="password" name="password" placeholder="password">
         </div>
         <div class="form-group">
             <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
@@ -22,6 +22,6 @@
         <input class="btn btn-primary" type="submit" value="Register">
     </form>
 
-      <a style="color:white">Oh!pal, you got already have an account? <a href="{% url 'login' %}">damn,Log In here.</a>
+      <a style="color:white">Oh!pal, already have an account? <a style="color: aqua;" href="{% url 'login' %}">damn,Log In here.</a>
 
 {% endblock %}
