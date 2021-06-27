@@ -1,0 +1,67 @@
+textarea {
+    min-height: 400px;
+    color: blue
+}
+body {
+  background: #444;
+  background-position: center;
+}
+.email-holder {
+    margin: 0;
+    margin-bottom: 2px;
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.read-true {
+    background-color: white;
+}
+
+.email-buttons {
+    margin: 0;
+}
+
+.email-buttons .btn {
+    margin-right: 5px;
+    color: purple
+
+}
+#login {
+
+  width: 27%;
+  opacity: 0.8;
+  background-color: powderblue;
+}
+#dsg{
+
+  text-align:right;
+  color:rgb(244, 244, 250);
+  position:relative;
+  margin-bottom: 100px;
+  
+}
+div.relative {
+  position: relative;
+  width: 600px;
+  height: 100px;
+  border: 1px solid #73AD21;
+}
+.btn{
+  background-color: rgb(253, 251, 251); /* red*/
+  border: none;
+  color: rgb(8, 8, 8);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#emails-view{
+  color:black
+}
+#full-view{
+  color:white
+}
