@@ -1,36 +1,42 @@
 {% extends "mail/layout.html" %}
 
 {% block body %}
-
-<br>
-<br>
-
-    <h2 id="login"> Login to your E-mail</h2>
-
-
-
     {% if message %}
         <div>{{ message }}</div>
     {% endif %}
-    <br>
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-
-        <div class="relative">
-
-
-
-          <div id="box" class="form-group">
-              <input autofocus class="form-control" type="email" name="email" placeholder="Email">
-          </div>
-          <div id="box" , class="form-group">
-              <input class="form-control" type="password" name="password" placeholder="Password">
-          </div>
+   
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box1">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container1">
+                <div class="form">
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <input  type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="inputbox">
+                        <input  type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="inputbox">
+                        <input  type="submit" value="Login">
+                    </div>
+                    <p class="forget" style="color: black;"> Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
+                </form>
+            </div>
+            </div>
         </div>
+    </section>
 
-        <input class="btn btn-primary" type="submit" value="Login">
-    </form>
 
-    <a style="color:white">Don't have an account?<a style="color: aqua;" href="{% url 'register' %}">get it Register here.</a>
+
 
 {% endblock %}

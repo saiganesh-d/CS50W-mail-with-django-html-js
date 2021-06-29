@@ -2,26 +2,54 @@
 
 {% block body %}
 
-    <h2>Register</h2>
+    
 
-    {% if message %}
-        <div>{{ message }}</div>
-    {% endif %}
 
-    <form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-        <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="Email Address, you are welcome to add @dsgmail.com">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="password">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
-        </div>
-        <input class="btn btn-primary" type="submit" value="Register">
-    </form>
+    
 
-      <a style="color:white">Oh!pal, already have an account? <a style="color: aqua;" href="{% url 'login' %}">damn,Log In here.</a>
+
+      <section>
+        <div class="color1"></div>
+        <div class="color1"></div>
+        <div class="color1"></div>
+        <div class="box1">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container1">
+                <div class="form">
+                 <form action="{% url 'register' %}" method="post">
+                    {% csrf_token %}
+                    <h2>Register</h2>
+                                    
+                    {% if message %}
+                    <div style="color: #fff; font-size: small;">{{ message }}</div>
+                        {% endif %}
+                    <div class="inputbox">
+                        <label for="username"> </label>
+                        <input  type="mail"  name="mail" placeholder="enter mail" id="username" pattern="[A-Za-z0-9]+">
+                    </div>
+                    <div class="inputbox">
+                       <input  type="password" name="password" placeholder="Password">
+                   </div>
+                   <div class="inputbox">
+                       <input type="password" name="confirmation" placeholder="Confirm Password">
+                   </div>
+                   <div class="inputbox">
+                       <input  type="submit" value="register">
+                   </div>
+                   <p class="forget" style="color: black;"> already Have an Account? <a href="{% url 'login' %}">Login here.</a></p>
+               </form>
+           </div>
+           </div>
+       </div>
+   </section>
+
+
+                      
+
+                   
 
 {% endblock %}
